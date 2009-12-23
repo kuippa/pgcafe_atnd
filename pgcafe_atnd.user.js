@@ -7,10 +7,10 @@
 //       [ parseHTML              ] copied from Pagerization (c) id:ofk
 // ==/UserScript==
 
-// Version 20091102
+// Version 20091216
 
 document.getElementById('event_title').value = '[第○回]三鷹プログラマーズカフェβ[○/○]';
-document.getElementById('event_description').value = 'ＬＴ、ワークショップ、フリー(雑談)、もくもく会 入退出自由ですが人数把握のため参加申し込みをお願いします。 ';
+document.getElementById('event_description').value = 'ＬＴ、ワークショップ、フリー(雑談)、もくもく会 入退出自由です。こちらに登録が無くても参加することができますが人数把握のためできるだけ事前の参加申し込みにご協力をお願いします。  特に初参加の方は是非ご登録ください。';
 document.getElementById('event_started_at_4i').value = '15'
 document.getElementById('event_ended_at_4i').value = '18'
 document.getElementById('event_started_at_5i').value = '00'
@@ -28,12 +28,19 @@ GM_xmlhttpRequest({
     } catch(e) {
       return;
     }
-    var elms = $X('//a[starts-with(@href, "http://atnd.org")]', htmldoc);      
-    if (elms.length > 0) {
-      var latestEvent = elms[0].text;
+
+    var elms = $X('//a[starts-with(@href, "http://atnd.org")]', htmldoc);
+    var latestEvent = "";
+    for(var i=0;i<5;i++){
+        if (elms.length == 0) {
+            break;
+        }
+        latestEvent = elms[i].text;
+        var match = latestEvent.match(/^\[第(\d+)回\].+\[(\d+)\/(\d+)\]/);
+        if (match != null) {
+            break;
+        }
     }
-    
-    var match = latestEvent.match(/^\[第(\d+)回\].+\[(\d+)\/(\d+)\]/);
     var num = match[1];
     var month = match[2];
     var day = match[3];
