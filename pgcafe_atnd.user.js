@@ -7,7 +7,7 @@
 //       [ parseHTML              ] copied from Pagerization (c) id:ofk
 // ==/UserScript==
 
-// Version 20091216
+// Version 20100507
 
 document.getElementById('event_title').value = '[第○回]三鷹プログラマーズカフェβ[○/○]';
 document.getElementById('event_description').value = 'ＬＴ、ワークショップ、フリー(雑談)、もくもく会 入退出自由です。こちらに登録が無くても参加することができますが人数把握のためできるだけ事前の参加申し込みにご協力をお願いします。  特に初参加の方は是非ご登録ください。';
@@ -15,7 +15,7 @@ document.getElementById('event_started_at_4i').value = '14'
 document.getElementById('event_ended_at_4i').value = '17'
 document.getElementById('event_started_at_5i').value = '30'
 document.getElementById('event_ended_at_5i').value = '30'
-document.getElementById('event_place').value =　'三鷹産業プラザ　（1Fロビーで部屋の確認ができます）通常B1会議室です';
+document.getElementById('event_place').value = '三鷹産業プラザ　（1Fロビーで部屋の確認ができます）通常B1会議室です';
 document.getElementById('event_address').value = '東京都三鷹市下連雀3－38－4';
 document.getElementById('event_url').value = 'http://mitaka.pgcafe.net/'
 
