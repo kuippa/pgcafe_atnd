@@ -1,5 +1,5 @@
-greasemonkeyをインストールし、
+ファイヤーフォックスのグリースモンキー版にかわり、Chorome extention版をつくりました。
+atndの詳細が変わった部分があるので2012/4番に反映しています。
 
-http://github.com/champierre/pgcafe_atnd/raw/master/pgcafe_atnd.user.js
-
-よりスクリプトをインストールしてご利用ください。
+ダウンロードして、ブラウザのツールから設定-拡張機能からパッケージ化されていない拡張機能を読み込むからパッケージを読み込んでください。
+http://atnd.org/events/newで機能します。

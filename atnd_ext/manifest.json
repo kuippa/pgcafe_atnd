@@ -1,0 +1,18 @@
+{
+"name": "pgcafe_atnd",
+"version": "1.0",
+"description": "add event to atnd",
+
+  "name": "Atnd ext",
+  "version": "0.0.1",
+  "description": "add event to atnd",
+  "permissions": [
+    "http://kuippa.s188.xrea.com/pgcafeatnd/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://atnd.org/events/new"],
+      "js" : ["contentscript.js"]
+    }
+  ]
+}
